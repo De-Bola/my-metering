@@ -1,0 +1,1145 @@
+2025-04-06 14:57:02.934 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-04-06 14:57:02.996 INFO  [main] c.e.metering.MeteringApplication - Starting MeteringApplication v0.0.1-SNAPSHOT using Java 21 with PID 1 (/metering.jar started by root in /metering)
+2025-04-06 14:57:02.999 DEBUG [main] c.e.metering.MeteringApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-06 14:57:03.001 INFO  [main] c.e.metering.MeteringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-06 14:57:04.227 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-06 14:57:04.230 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-06 14:57:04.377 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 136 ms. Found 3 JPA repository interfaces.
+2025-04-06 14:57:04.395 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-06 14:57:04.397 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-06 14:57:04.417 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.enefit.metering.repository.ConsumptionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-06 14:57:04.419 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.enefit.metering.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-06 14:57:04.420 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.enefit.metering.repository.MeteringPointsRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-06 14:57:04.422 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2025-04-06 14:57:05.396 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-06 14:57:05.413 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-06 14:57:05.419 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-06 14:57:05.421 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-06 14:57:05.459 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-06 14:57:05.462 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2405 ms
+2025-04-06 14:57:05.802 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-06 14:57:14.857 ERROR [main] o.s.b.w.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthFilter' defined in URL [jar:nested:/metering.jar/!BOOT-INF/classes/!/com/enefit/metering/config/JwtAuthFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customerDetailsService' defined in URL [jar:nested:/metering.jar/!BOOT-INF/classes/!/com/enefit/metering/service/CustomerDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customerRepository' defined in com.enefit.metering.repository.CustomerRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2025-04-06 14:57:14.878 INFO  [main] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-04-06 14:57:14.884 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-04-06 14:57:14.901 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-06 14:57:14.915 ERROR [main] o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:170)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.enefit.metering.MeteringApplication.main(MeteringApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:517)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:219)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthFilter' defined in URL [jar:nested:/metering.jar/!BOOT-INF/classes/!/com/enefit/metering/config/JwtAuthFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customerDetailsService' defined in URL [jar:nested:/metering.jar/!BOOT-INF/classes/!/com/enefit/metering/service/CustomerDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customerRepository' defined in com.enefit.metering.repository.CustomerRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:271)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:245)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4467)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128)
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerDetailsService' defined in URL [jar:nested:/metering.jar/!BOOT-INF/classes/!/com/enefit/metering/service/CustomerDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customerRepository' defined in com.enefit.metering.repository.CustomerRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 59 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customerRepository' defined in com.enefit.metering.repository.CustomerRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1711)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1460)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 72 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1361)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1191)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 85 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 97 common frames omitted
+Caused by: liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: The connection attempt failed.
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:267)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	... 106 common frames omitted
+Caused by: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: The connection attempt failed.
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:259)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.Scope.child(Scope.java:257)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:250)
+	... 108 common frames omitted
+Caused by: org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:364)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+	at org.postgresql.Driver.makeConnection(Driver.java:446)
+	at org.postgresql.Driver.connect(Driver.java:298)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:254)
+	... 114 common frames omitted
+Caused by: java.net.UnknownHostException: db
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:260)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:121)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:140)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:268)
+	... 126 common frames omitted
+2025-04-06 15:07:50.513 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-04-06 15:07:50.590 INFO  [main] c.e.metering.MeteringApplication - Starting MeteringApplication v0.0.1-SNAPSHOT using Java 21 with PID 1 (/metering.jar started by root in /metering)
+2025-04-06 15:07:50.592 DEBUG [main] c.e.metering.MeteringApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-06 15:07:50.594 INFO  [main] c.e.metering.MeteringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-06 15:07:51.899 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-06 15:07:51.901 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-06 15:07:52.059 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 149 ms. Found 3 JPA repository interfaces.
+2025-04-06 15:07:52.077 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-06 15:07:52.079 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-06 15:07:52.094 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.enefit.metering.repository.ConsumptionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-06 15:07:52.096 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.enefit.metering.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-06 15:07:52.097 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.enefit.metering.repository.MeteringPointsRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-06 15:07:52.098 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2025-04-06 15:07:53.021 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-06 15:07:53.036 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-06 15:07:53.039 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-06 15:07:53.040 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-06 15:07:53.079 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-06 15:07:53.081 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2430 ms
+2025-04-06 15:07:53.399 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-06 15:08:02.454 ERROR [main] o.s.b.w.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthFilter' defined in URL [jar:nested:/metering.jar/!BOOT-INF/classes/!/com/enefit/metering/config/JwtAuthFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customerDetailsService' defined in URL [jar:nested:/metering.jar/!BOOT-INF/classes/!/com/enefit/metering/service/CustomerDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customerRepository' defined in com.enefit.metering.repository.CustomerRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2025-04-06 15:08:02.477 INFO  [main] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-04-06 15:08:02.482 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-04-06 15:08:02.496 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-06 15:08:02.512 ERROR [main] o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:170)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.enefit.metering.MeteringApplication.main(MeteringApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:517)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:219)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthFilter' defined in URL [jar:nested:/metering.jar/!BOOT-INF/classes/!/com/enefit/metering/config/JwtAuthFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customerDetailsService' defined in URL [jar:nested:/metering.jar/!BOOT-INF/classes/!/com/enefit/metering/service/CustomerDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customerRepository' defined in com.enefit.metering.repository.CustomerRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:271)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:245)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4467)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128)
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerDetailsService' defined in URL [jar:nested:/metering.jar/!BOOT-INF/classes/!/com/enefit/metering/service/CustomerDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customerRepository' defined in com.enefit.metering.repository.CustomerRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 59 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customerRepository' defined in com.enefit.metering.repository.CustomerRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1711)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1460)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 72 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1361)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1191)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 85 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 97 common frames omitted
+Caused by: liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: The connection attempt failed.
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:267)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	... 106 common frames omitted
+Caused by: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: The connection attempt failed.
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:259)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.Scope.child(Scope.java:257)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:250)
+	... 108 common frames omitted
+Caused by: org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:364)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+	at org.postgresql.Driver.makeConnection(Driver.java:446)
+	at org.postgresql.Driver.connect(Driver.java:298)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:254)
+	... 114 common frames omitted
+Caused by: java.net.UnknownHostException: db
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:260)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:121)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:140)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:268)
+	... 126 common frames omitted
+2025-04-06 15:10:21.454 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-04-06 15:10:21.533 INFO  [main] c.e.metering.MeteringApplication - Starting MeteringApplication v0.0.1-SNAPSHOT using Java 21 with PID 1 (/metering.jar started by root in /metering)
+2025-04-06 15:10:21.535 DEBUG [main] c.e.metering.MeteringApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-06 15:10:21.537 INFO  [main] c.e.metering.MeteringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-06 15:10:22.805 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-06 15:10:22.808 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-06 15:10:22.958 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 142 ms. Found 3 JPA repository interfaces.
+2025-04-06 15:10:22.982 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-06 15:10:22.984 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-06 15:10:23.004 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.enefit.metering.repository.ConsumptionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-06 15:10:23.005 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.enefit.metering.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-06 15:10:23.006 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.enefit.metering.repository.MeteringPointsRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-06 15:10:23.007 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2025-04-06 15:10:24.075 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-06 15:10:24.095 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-06 15:10:24.100 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-06 15:10:24.101 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-06 15:10:24.149 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-06 15:10:24.152 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2546 ms
+2025-04-06 15:10:24.563 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-06 15:10:25.694 ERROR [main] o.s.b.w.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthFilter' defined in URL [jar:nested:/metering.jar/!BOOT-INF/classes/!/com/enefit/metering/config/JwtAuthFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customerDetailsService' defined in URL [jar:nested:/metering.jar/!BOOT-INF/classes/!/com/enefit/metering/service/CustomerDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customerRepository' defined in com.enefit.metering.repository.CustomerRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2025-04-06 15:10:25.719 INFO  [main] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-04-06 15:10:25.724 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-04-06 15:10:25.742 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-06 15:10:25.758 ERROR [main] o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:170)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.enefit.metering.MeteringApplication.main(MeteringApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:517)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:219)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthFilter' defined in URL [jar:nested:/metering.jar/!BOOT-INF/classes/!/com/enefit/metering/config/JwtAuthFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customerDetailsService' defined in URL [jar:nested:/metering.jar/!BOOT-INF/classes/!/com/enefit/metering/service/CustomerDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customerRepository' defined in com.enefit.metering.repository.CustomerRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:271)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:245)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4467)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128)
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerDetailsService' defined in URL [jar:nested:/metering.jar/!BOOT-INF/classes/!/com/enefit/metering/service/CustomerDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customerRepository' defined in com.enefit.metering.repository.CustomerRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 59 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customerRepository' defined in com.enefit.metering.repository.CustomerRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1711)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1460)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 72 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1361)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1191)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 85 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgres"
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 97 common frames omitted
+Caused by: liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgres"
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:267)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	... 106 common frames omitted
+Caused by: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgres"
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:259)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.Scope.child(Scope.java:257)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:250)
+	... 108 common frames omitted
+Caused by: org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgres"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:704)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:213)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:268)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+	at org.postgresql.Driver.makeConnection(Driver.java:446)
+	at org.postgresql.Driver.connect(Driver.java:298)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:254)
+	... 114 common frames omitted
+2025-04-06 15:10:46.785 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-04-06 15:10:46.846 INFO  [main] c.e.metering.MeteringApplication - Starting MeteringApplication v0.0.1-SNAPSHOT using Java 21 with PID 1 (/metering.jar started by root in /metering)
+2025-04-06 15:10:46.847 DEBUG [main] c.e.metering.MeteringApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-06 15:10:46.849 INFO  [main] c.e.metering.MeteringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-06 15:10:48.136 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-06 15:10:48.139 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-06 15:10:48.294 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 145 ms. Found 3 JPA repository interfaces.
+2025-04-06 15:10:48.314 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-06 15:10:48.316 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-06 15:10:48.334 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.enefit.metering.repository.ConsumptionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-06 15:10:48.336 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.enefit.metering.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-06 15:10:48.337 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.enefit.metering.repository.MeteringPointsRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-06 15:10:48.338 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2025-04-06 15:10:49.300 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-06 15:10:49.316 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-06 15:10:49.319 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-06 15:10:49.320 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-06 15:10:49.360 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-06 15:10:49.362 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2458 ms
+2025-04-06 15:10:49.695 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-06 15:10:49.851 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2b9ecd05
+2025-04-06 15:10:49.854 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-06 15:10:49.972 INFO  [main] liquibase.database - Set default schema name to public
+2025-04-06 15:10:50.358 INFO  [main] liquibase.changelog - Creating database history table with name: public.databasechangelog
+2025-04-06 15:10:50.397 INFO  [main] liquibase.changelog - Reading from public.databasechangelog
+2025-04-06 15:10:50.445 INFO  [main] liquibase.lockservice - Successfully acquired change log lock
+2025-04-06 15:10:50.447 INFO  [main] liquibase.command - Using deploymentId: 3952250447
+2025-04-06 15:10:50.449 INFO  [main] liquibase.changelog - Reading from public.databasechangelog
+2025-04-06 15:10:50.455 INFO  [main] liquibase.ui - Running Changeset: db/changelog/db.changelog-master.xml::0::admin
+2025-04-06 15:10:50.458 INFO  [main] liquibase.changelog - ChangeSet db/changelog/db.changelog-master.xml::0::admin ran successfully in 1ms
+2025-04-06 15:10:50.472 INFO  [main] liquibase.util - UPDATE SUMMARY
+2025-04-06 15:10:50.472 INFO  [main] liquibase.util - Run:                          1
+2025-04-06 15:10:50.473 INFO  [main] liquibase.util - Previously run:               0
+2025-04-06 15:10:50.473 INFO  [main] liquibase.util - Filtered out:                 0
+2025-04-06 15:10:50.474 INFO  [main] liquibase.util - -------------------------------
+2025-04-06 15:10:50.474 INFO  [main] liquibase.util - Total change sets:            1
+2025-04-06 15:10:50.475 INFO  [main] liquibase.util - Update summary generated
+2025-04-06 15:10:50.478 INFO  [main] liquibase.command - Update command completed successfully.
+2025-04-06 15:10:50.479 INFO  [main] liquibase.ui - Liquibase: Update has been successful. Rows affected: 1
+2025-04-06 15:10:50.484 INFO  [main] liquibase.lockservice - Successfully released change log lock
+2025-04-06 15:10:50.486 INFO  [main] liquibase.command - Command execution complete
+2025-04-06 15:10:50.599 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-06 15:10:50.645 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-06 15:10:50.678 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-06 15:10:50.949 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-06 15:10:50.990 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-06 15:10:51.002 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-06 15:10:51.730 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-06 15:10:51.777 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-04-06 15:10:51.777 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukbepynu3b6l8k2ppuq6b33xfxc" of relation "customers" does not exist, skipping
+2025-04-06 15:10:51.786 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-06 15:10:52.115 DEBUG [main] c.e.metering.config.JwtAuthFilter - Filter 'jwtAuthFilter' configured for use
+2025-04-06 15:10:52.208 INFO  [main] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-04-06 15:10:52.209 WARN  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-06 15:10:52.467 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-06 15:10:53.826 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 7 endpoints beneath base path '/actuator'
+2025-04-06 15:10:53.910 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-06 15:10:55.135 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-06 15:10:55.147 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-06 15:10:55.163 INFO  [main] c.e.metering.MeteringApplication - Started MeteringApplication in 8.823 seconds (process running for 9.277)
+2025-04-06 15:12:07.742 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-06 15:12:07.747 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-06 15:12:09.790 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-06 15:12:09.793 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-06 15:12:09.797 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-06 15:12:15.799 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-04-06 15:12:15.863 INFO  [main] c.e.metering.MeteringApplication - Starting MeteringApplication v0.0.1-SNAPSHOT using Java 21 with PID 1 (/metering.jar started by root in /metering)
+2025-04-06 15:12:15.864 DEBUG [main] c.e.metering.MeteringApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-06 15:12:15.866 INFO  [main] c.e.metering.MeteringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-06 15:12:17.113 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-06 15:12:17.116 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-06 15:12:17.270 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 144 ms. Found 3 JPA repository interfaces.
+2025-04-06 15:12:17.288 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-06 15:12:17.290 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-06 15:12:17.306 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.enefit.metering.repository.ConsumptionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-06 15:12:17.307 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.enefit.metering.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-06 15:12:17.309 INFO  [main] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.enefit.metering.repository.MeteringPointsRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-06 15:12:17.309 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2025-04-06 15:12:18.291 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-06 15:12:18.307 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-06 15:12:18.311 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-06 15:12:18.312 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-06 15:12:18.353 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-06 15:12:18.355 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2430 ms
+2025-04-06 15:12:18.715 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-06 15:12:18.876 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@17f41739
+2025-04-06 15:12:18.878 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-06 15:12:18.988 INFO  [main] liquibase.database - Set default schema name to public
+2025-04-06 15:12:19.423 INFO  [main] liquibase.changelog - Reading from public.databasechangelog
+2025-04-06 15:12:19.455 INFO  [main] liquibase.ui - Database is up to date, no changesets to execute
+2025-04-06 15:12:19.458 INFO  [main] liquibase.changelog - Reading from public.databasechangelog
+2025-04-06 15:12:19.465 INFO  [main] liquibase.util - UPDATE SUMMARY
+2025-04-06 15:12:19.466 INFO  [main] liquibase.util - Run:                          0
+2025-04-06 15:12:19.466 INFO  [main] liquibase.util - Previously run:               1
+2025-04-06 15:12:19.466 INFO  [main] liquibase.util - Filtered out:                 0
+2025-04-06 15:12:19.467 INFO  [main] liquibase.util - -------------------------------
+2025-04-06 15:12:19.467 INFO  [main] liquibase.util - Total change sets:            1
+2025-04-06 15:12:19.468 INFO  [main] liquibase.util - Update summary generated
+2025-04-06 15:12:19.470 INFO  [main] liquibase.command - Command execution complete
+2025-04-06 15:12:19.583 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-06 15:12:19.627 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-06 15:12:19.659 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-06 15:12:19.923 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-06 15:12:19.964 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-06 15:12:19.977 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-06 15:12:20.724 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-06 15:12:20.896 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-06 15:12:21.286 DEBUG [main] c.e.metering.config.JwtAuthFilter - Filter 'jwtAuthFilter' configured for use
+2025-04-06 15:12:21.376 INFO  [main] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-04-06 15:12:21.377 WARN  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-06 15:12:21.644 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-06 15:12:23.027 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 7 endpoints beneath base path '/actuator'
+2025-04-06 15:12:23.120 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-06 15:12:24.586 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-06 15:12:24.602 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-06 15:12:24.619 INFO  [main] c.e.metering.MeteringApplication - Started MeteringApplication in 9.271 seconds (process running for 9.752)
+2025-04-06 15:18:58.356 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-06 15:18:58.358 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-06 15:18:58.365 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2025-04-06 15:18:58.409 DEBUG [http-nio-8080-exec-1] c.e.metering.config.JwtAuthFilter - No Bearer token found in the request header
+2025-04-06 15:18:58.526 INFO  [http-nio-8080-exec-1] c.e.m.controller.AuthController - Login request for user: Z*************y
+2025-04-06 15:18:58.762 ERROR [http-nio-8080-exec-1] c.e.metering.service.CustomerService - Authentication failed for username: Z*************y
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:141)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at com.enefit.metering.service.CustomerService.login(CustomerService.java:143)
+	at com.enefit.metering.controller.AuthController.createToken(AuthController.java:54)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at com.enefit.metering.config.JwtAuthFilter.doFilterInternal(JwtAuthFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-04-06 15:18:58.770 ERROR [http-nio-8080-exec-1] c.e.m.controller.ControllerAdvice - Internal Server Error: 
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:141)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at com.enefit.metering.service.CustomerService.login(CustomerService.java:143)
+	at com.enefit.metering.controller.AuthController.createToken(AuthController.java:54)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at com.enefit.metering.config.JwtAuthFilter.doFilterInternal(JwtAuthFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-04-06 15:19:09.555 DEBUG [http-nio-8080-exec-4] c.e.metering.config.JwtAuthFilter - No Bearer token found in the request header
+2025-04-06 15:19:09.563 INFO  [http-nio-8080-exec-4] c.e.m.controller.AuthController - Registration request for new user: H**********s
+2025-04-06 15:19:09.572 INFO  [http-nio-8080-exec-4] c.e.metering.service.CustomerService - Creating customer with username: H**********s
+2025-04-06 15:19:28.596 DEBUG [http-nio-8080-exec-5] c.e.metering.config.JwtAuthFilter - No Bearer token found in the request header
+2025-04-06 15:19:28.600 INFO  [http-nio-8080-exec-5] c.e.m.controller.AuthController - Login request for user: H**********s
+2025-04-06 15:19:28.720 INFO  [http-nio-8080-exec-5] c.e.metering.service.CustomerService - Retrieving customer with username: H**********s
+2025-04-06 15:19:50.553 INFO  [http-nio-8080-exec-6] c.e.metering.config.JwtAuthFilter - Authenticated user: H**********s
+2025-04-06 15:19:50.564 INFO  [http-nio-8080-exec-6] c.e.m.controller.CustomerController - Retrieving logged-in customer: H**********s
+2025-04-06 15:19:50.565 INFO  [http-nio-8080-exec-6] c.e.metering.service.CustomerService - Retrieving customer with username: H**********s
+2025-04-06 15:19:57.807 INFO  [http-nio-8080-exec-7] c.e.metering.config.JwtAuthFilter - Authenticated user: H**********s
+2025-04-06 15:19:57.819 INFO  [http-nio-8080-exec-7] c.e.m.c.MarketPriceController - Retrieving market prices from 2024-05-31T20:59:59.999Z to 2024-12-31T20:59:59.999Z
+2025-04-06 15:19:58.284 INFO  [http-nio-8080-exec-7] c.e.m.service.MarketPriceService - Fetching raw market prices from 2024-05-31T20:59:59.999Z to 2024-12-31T20:59:59.999Z
+2025-04-06 15:19:58.285 INFO  [http-nio-8080-exec-7] c.e.m.service.MarketPriceService - These are the props https://estfeed.elering.ee - /api/public/v1/energy-price/electricity - +03:00
+2025-04-06 15:20:00.641 INFO  [http-nio-8080-exec-7] c.e.m.service.MarketPriceService - Here are the marketData retrieved by proxy [MarketPriceDataPoint{centsPerKwh=10.0382, centsPerKwhWithVat=12.246665, eurPerMwh=100.3825, eurPerMwhWithVat=122.46665, fromDateTime=2024-05-30T21:00Z, toDateTime=2024-05-31T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=7.4497, centsPerKwhWithVat=9.088695, eurPerMwh=74.4975, eurPerMwhWithVat=90.88695, fromDateTime=2024-05-31T21:00Z, toDateTime=2024-06-01T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=5.2174, centsPerKwhWithVat=6.365248, eurPerMwh=52.1741, eurPerMwhWithVat=63.652483, fromDateTime=2024-06-01T21:00Z, toDateTime=2024-06-02T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.6022, centsPerKwhWithVat=15.374795, eurPerMwh=126.0229, eurPerMwhWithVat=153.747958, fromDateTime=2024-06-02T21:00Z, toDateTime=2024-06-03T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.3222, centsPerKwhWithVat=15.033094, eurPerMwh=123.222, eurPerMwhWithVat=150.330941, fromDateTime=2024-06-03T21:00Z, toDateTime=2024-06-04T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=11.3984, centsPerKwhWithVat=13.906068, eurPerMwh=113.9841, eurPerMwhWithVat=139.060683, fromDateTime=2024-06-04T21:00Z, toDateTime=2024-06-05T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.4741, centsPerKwhWithVat=12.778483, eurPerMwh=104.7416, eurPerMwhWithVat=127.784833, fromDateTime=2024-06-05T21:00Z, toDateTime=2024-06-06T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.5171, centsPerKwhWithVat=12.830892, eurPerMwh=105.1712, eurPerMwhWithVat=128.308925, fromDateTime=2024-06-06T21:00Z, toDateTime=2024-06-07T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=6.4034, centsPerKwhWithVat=7.812168, eurPerMwh=64.0341, eurPerMwhWithVat=78.121683, fromDateTime=2024-06-07T21:00Z, toDateTime=2024-06-08T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=2.9412, centsPerKwhWithVat=3.588274, eurPerMwh=29.412, eurPerMwhWithVat=35.882741, fromDateTime=2024-06-08T21:00Z, toDateTime=2024-06-09T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.1625, centsPerKwhWithVat=12.398351, eurPerMwh=101.6258, eurPerMwhWithVat=123.983516, fromDateTime=2024-06-09T21:00Z, toDateTime=2024-06-10T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=8.383, centsPerKwhWithVat=10.22731, eurPerMwh=83.8304, eurPerMwhWithVat=102.273108, fromDateTime=2024-06-10T21:00Z, toDateTime=2024-06-11T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.8183, centsPerKwhWithVat=11.978417, eurPerMwh=98.1837, eurPerMwhWithVat=119.784175, fromDateTime=2024-06-11T21:00Z, toDateTime=2024-06-12T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=13.791, centsPerKwhWithVat=16.825121, eurPerMwh=137.9108, eurPerMwhWithVat=168.251216, fromDateTime=2024-06-12T21:00Z, toDateTime=2024-06-13T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=13.4999, centsPerKwhWithVat=16.469949, eurPerMwh=134.9995, eurPerMwhWithVat=164.699491, fromDateTime=2024-06-13T21:00Z, toDateTime=2024-06-14T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=3.6588, centsPerKwhWithVat=4.463776, eurPerMwh=36.5883, eurPerMwhWithVat=44.637766, fromDateTime=2024-06-14T21:00Z, toDateTime=2024-06-15T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=3.2007, centsPerKwhWithVat=3.904965, eurPerMwh=32.0079, eurPerMwhWithVat=39.049658, fromDateTime=2024-06-15T21:00Z, toDateTime=2024-06-16T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=11.7616, centsPerKwhWithVat=14.349182, eurPerMwh=117.6162, eurPerMwhWithVat=143.491825, fromDateTime=2024-06-16T21:00Z, toDateTime=2024-06-17T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=11.682, centsPerKwhWithVat=14.25209, eurPerMwh=116.8204, eurPerMwhWithVat=142.520908, fromDateTime=2024-06-17T21:00Z, toDateTime=2024-06-18T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.6237, centsPerKwhWithVat=12.960975, eurPerMwh=106.2375, eurPerMwhWithVat=129.60975, fromDateTime=2024-06-18T21:00Z, toDateTime=2024-06-19T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.961, centsPerKwhWithVat=12.152521, eurPerMwh=99.6108, eurPerMwhWithVat=121.525216, fromDateTime=2024-06-19T21:00Z, toDateTime=2024-06-20T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=11.2609, centsPerKwhWithVat=13.738318, eurPerMwh=112.6091, eurPerMwhWithVat=137.383183, fromDateTime=2024-06-20T21:00Z, toDateTime=2024-06-21T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=5.4259, centsPerKwhWithVat=6.619618, eurPerMwh=54.2591, eurPerMwhWithVat=66.196183, fromDateTime=2024-06-21T21:00Z, toDateTime=2024-06-22T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=5.6251, centsPerKwhWithVat=6.862652, eurPerMwh=56.2512, eurPerMwhWithVat=68.626525, fromDateTime=2024-06-22T21:00Z, toDateTime=2024-06-23T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.2579, centsPerKwhWithVat=12.514709, eurPerMwh=102.5795, eurPerMwhWithVat=125.147091, fromDateTime=2024-06-23T21:00Z, toDateTime=2024-06-24T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.8316, centsPerKwhWithVat=15.654582, eurPerMwh=128.3162, eurPerMwhWithVat=156.545825, fromDateTime=2024-06-24T21:00Z, toDateTime=2024-06-25T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.326, centsPerKwhWithVat=15.03777, eurPerMwh=123.2604, eurPerMwhWithVat=150.377708, fromDateTime=2024-06-25T21:00Z, toDateTime=2024-06-26T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.8349, centsPerKwhWithVat=13.218598, eurPerMwh=108.3491, eurPerMwhWithVat=132.185983, fromDateTime=2024-06-26T21:00Z, toDateTime=2024-06-27T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=8.6418, centsPerKwhWithVat=10.543087, eurPerMwh=86.4187, eurPerMwhWithVat=105.430875, fromDateTime=2024-06-27T21:00Z, toDateTime=2024-06-28T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=7.7121, centsPerKwhWithVat=9.408792, eurPerMwh=77.1212, eurPerMwhWithVat=94.087925, fromDateTime=2024-06-28T21:00Z, toDateTime=2024-06-29T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=4.4087, centsPerKwhWithVat=5.378624, eurPerMwh=44.087, eurPerMwhWithVat=53.786241, fromDateTime=2024-06-29T21:00Z, toDateTime=2024-06-30T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=13.4734, centsPerKwhWithVat=16.437619, eurPerMwh=134.7345, eurPerMwhWithVat=164.376191, fromDateTime=2024-06-30T21:00Z, toDateTime=2024-07-01T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=15.7592, centsPerKwhWithVat=19.226234, eurPerMwh=157.592, eurPerMwhWithVat=192.262341, fromDateTime=2024-07-01T21:00Z, toDateTime=2024-07-02T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=13.9565, centsPerKwhWithVat=17.02693, eurPerMwh=139.565, eurPerMwhWithVat=170.2693, fromDateTime=2024-07-02T21:00Z, toDateTime=2024-07-03T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.6367, centsPerKwhWithVat=15.416784, eurPerMwh=126.367, eurPerMwhWithVat=154.167841, fromDateTime=2024-07-03T21:00Z, toDateTime=2024-07-04T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=7.4827, centsPerKwhWithVat=9.128904, eurPerMwh=74.827, eurPerMwhWithVat=91.289041, fromDateTime=2024-07-04T21:00Z, toDateTime=2024-07-05T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=2.6477, centsPerKwhWithVat=3.230255, eurPerMwh=26.4775, eurPerMwhWithVat=32.30255, fromDateTime=2024-07-05T21:00Z, toDateTime=2024-07-06T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=3.5216, centsPerKwhWithVat=4.296433, eurPerMwh=35.2166, eurPerMwhWithVat=42.964333, fromDateTime=2024-07-06T21:00Z, toDateTime=2024-07-07T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.484, centsPerKwhWithVat=15.230581, eurPerMwh=124.8408, eurPerMwhWithVat=152.305816, fromDateTime=2024-07-07T21:00Z, toDateTime=2024-07-08T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.5872, centsPerKwhWithVat=12.916495, eurPerMwh=105.8729, eurPerMwhWithVat=129.164958, fromDateTime=2024-07-08T21:00Z, toDateTime=2024-07-09T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.3038, centsPerKwhWithVat=12.570676, eurPerMwh=103.0383, eurPerMwhWithVat=125.706766, fromDateTime=2024-07-09T21:00Z, toDateTime=2024-07-10T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=11.6178, centsPerKwhWithVat=14.173807, eurPerMwh=116.1787, eurPerMwhWithVat=141.738075, fromDateTime=2024-07-10T21:00Z, toDateTime=2024-07-11T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.6678, centsPerKwhWithVat=15.454807, eurPerMwh=126.6787, eurPerMwhWithVat=154.548075, fromDateTime=2024-07-11T21:00Z, toDateTime=2024-07-12T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=6.4997, centsPerKwhWithVat=7.929745, eurPerMwh=64.9979, eurPerMwhWithVat=79.297458, fromDateTime=2024-07-12T21:00Z, toDateTime=2024-07-13T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=6.3752, centsPerKwhWithVat=7.777855, eurPerMwh=63.7529, eurPerMwhWithVat=77.778558, fromDateTime=2024-07-13T21:00Z, toDateTime=2024-07-14T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.5457, centsPerKwhWithVat=15.305815, eurPerMwh=125.4575, eurPerMwhWithVat=153.05815, fromDateTime=2024-07-14T21:00Z, toDateTime=2024-07-15T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.7175, centsPerKwhWithVat=13.0754, eurPerMwh=107.1754, eurPerMwhWithVat=130.754008, fromDateTime=2024-07-15T21:00Z, toDateTime=2024-07-16T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.7967, centsPerKwhWithVat=11.952035, eurPerMwh=97.9675, eurPerMwhWithVat=119.52035, fromDateTime=2024-07-16T21:00Z, toDateTime=2024-07-17T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.127, centsPerKwhWithVat=11.13499, eurPerMwh=91.2704, eurPerMwhWithVat=111.349908, fromDateTime=2024-07-17T21:00Z, toDateTime=2024-07-18T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.0612, centsPerKwhWithVat=12.274775, eurPerMwh=100.6129, eurPerMwhWithVat=122.747758, fromDateTime=2024-07-18T21:00Z, toDateTime=2024-07-19T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=8.5568, centsPerKwhWithVat=10.439387, eurPerMwh=85.5687, eurPerMwhWithVat=104.393875, fromDateTime=2024-07-19T21:00Z, toDateTime=2024-07-20T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.4813, centsPerKwhWithVat=11.567226, eurPerMwh=94.8133, eurPerMwhWithVat=115.672266, fromDateTime=2024-07-20T21:00Z, toDateTime=2024-07-21T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=11.2669, centsPerKwhWithVat=13.745638, eurPerMwh=112.6691, eurPerMwhWithVat=137.456383, fromDateTime=2024-07-21T21:00Z, toDateTime=2024-07-22T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=11.1895, centsPerKwhWithVat=13.65124, eurPerMwh=111.8954, eurPerMwhWithVat=136.512408, fromDateTime=2024-07-22T21:00Z, toDateTime=2024-07-23T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.2823, centsPerKwhWithVat=12.544497, eurPerMwh=102.8237, eurPerMwhWithVat=125.444975, fromDateTime=2024-07-23T21:00Z, toDateTime=2024-07-24T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=11.728, centsPerKwhWithVat=14.308261, eurPerMwh=117.2808, eurPerMwhWithVat=143.082616, fromDateTime=2024-07-24T21:00Z, toDateTime=2024-07-25T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.4769, centsPerKwhWithVat=12.781889, eurPerMwh=104.7695, eurPerMwhWithVat=127.818891, fromDateTime=2024-07-25T21:00Z, toDateTime=2024-07-26T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.7121, centsPerKwhWithVat=11.848792, eurPerMwh=97.1212, eurPerMwhWithVat=118.487925, fromDateTime=2024-07-26T21:00Z, toDateTime=2024-07-27T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=6.8079, centsPerKwhWithVat=8.305709, eurPerMwh=68.0795, eurPerMwhWithVat=83.057091, fromDateTime=2024-07-27T21:00Z, toDateTime=2024-07-28T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=5.5777, centsPerKwhWithVat=6.804905, eurPerMwh=55.7779, eurPerMwhWithVat=68.049058, fromDateTime=2024-07-28T21:00Z, toDateTime=2024-07-29T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=7.8606, centsPerKwhWithVat=9.589962, eurPerMwh=78.6062, eurPerMwhWithVat=95.899625, fromDateTime=2024-07-29T21:00Z, toDateTime=2024-07-30T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=8.212, centsPerKwhWithVat=10.018741, eurPerMwh=82.1208, eurPerMwhWithVat=100.187416, fromDateTime=2024-07-30T21:00Z, toDateTime=2024-07-31T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.6232, centsPerKwhWithVat=12.960365, eurPerMwh=106.2325, eurPerMwhWithVat=129.60365, fromDateTime=2024-07-31T21:00Z, toDateTime=2024-08-01T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=15.226, centsPerKwhWithVat=18.57572, eurPerMwh=152.26, eurPerMwhWithVat=185.7572, fromDateTime=2024-08-01T21:00Z, toDateTime=2024-08-02T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.0487, centsPerKwhWithVat=12.259475, eurPerMwh=100.4875, eurPerMwhWithVat=122.59475, fromDateTime=2024-08-02T21:00Z, toDateTime=2024-08-03T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.5464, centsPerKwhWithVat=11.646679, eurPerMwh=95.4645, eurPerMwhWithVat=116.466791, fromDateTime=2024-08-03T21:00Z, toDateTime=2024-08-04T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=13.1293, centsPerKwhWithVat=16.017786, eurPerMwh=131.2933, eurPerMwhWithVat=160.177866, fromDateTime=2024-08-04T21:00Z, toDateTime=2024-08-05T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.4835, centsPerKwhWithVat=11.569971, eurPerMwh=94.8358, eurPerMwhWithVat=115.699716, fromDateTime=2024-08-05T21:00Z, toDateTime=2024-08-06T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.4062, centsPerKwhWithVat=15.135625, eurPerMwh=124.0625, eurPerMwhWithVat=151.35625, fromDateTime=2024-08-06T21:00Z, toDateTime=2024-08-07T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=11.2974, centsPerKwhWithVat=13.782848, eurPerMwh=112.9741, eurPerMwhWithVat=137.828483, fromDateTime=2024-08-07T21:00Z, toDateTime=2024-08-08T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.1968, centsPerKwhWithVat=12.440187, eurPerMwh=101.9687, eurPerMwhWithVat=124.401875, fromDateTime=2024-08-08T21:00Z, toDateTime=2024-08-09T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=5.4165, centsPerKwhWithVat=6.60818, eurPerMwh=54.1654, eurPerMwhWithVat=66.081808, fromDateTime=2024-08-09T21:00Z, toDateTime=2024-08-10T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=5.1893, centsPerKwhWithVat=6.330986, eurPerMwh=51.8933, eurPerMwhWithVat=63.309866, fromDateTime=2024-08-10T21:00Z, toDateTime=2024-08-11T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.3577, centsPerKwhWithVat=11.416404, eurPerMwh=93.577, eurPerMwhWithVat=114.164041, fromDateTime=2024-08-11T21:00Z, toDateTime=2024-08-12T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.626, centsPerKwhWithVat=12.963821, eurPerMwh=106.2608, eurPerMwhWithVat=129.638216, fromDateTime=2024-08-12T21:00Z, toDateTime=2024-08-13T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=13.7451, centsPerKwhWithVat=16.769052, eurPerMwh=137.4512, eurPerMwhWithVat=167.690525, fromDateTime=2024-08-13T21:00Z, toDateTime=2024-08-14T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.3467, centsPerKwhWithVat=11.403085, eurPerMwh=93.4679, eurPerMwhWithVat=114.030858, fromDateTime=2024-08-14T21:00Z, toDateTime=2024-08-15T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=11.1475, centsPerKwhWithVat=13.59995, eurPerMwh=111.475, eurPerMwhWithVat=135.9995, fromDateTime=2024-08-15T21:00Z, toDateTime=2024-08-16T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.1214, centsPerKwhWithVat=12.348179, eurPerMwh=101.2145, eurPerMwhWithVat=123.481791, fromDateTime=2024-08-16T21:00Z, toDateTime=2024-08-17T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.5175, centsPerKwhWithVat=11.6114, eurPerMwh=95.1754, eurPerMwhWithVat=116.114008, fromDateTime=2024-08-17T21:00Z, toDateTime=2024-08-18T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=13.3205, centsPerKwhWithVat=16.251111, eurPerMwh=133.2058, eurPerMwhWithVat=162.511116, fromDateTime=2024-08-18T21:00Z, toDateTime=2024-08-19T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.5187, centsPerKwhWithVat=15.272824, eurPerMwh=125.187, eurPerMwhWithVat=152.728241, fromDateTime=2024-08-19T21:00Z, toDateTime=2024-08-20T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.8911, centsPerKwhWithVat=15.727172, eurPerMwh=128.9112, eurPerMwhWithVat=157.271725, fromDateTime=2024-08-20T21:00Z, toDateTime=2024-08-21T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=11.1813, centsPerKwhWithVat=13.641277, eurPerMwh=111.8137, eurPerMwhWithVat=136.412775, fromDateTime=2024-08-21T21:00Z, toDateTime=2024-08-22T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.3921, centsPerKwhWithVat=12.678443, eurPerMwh=103.9216, eurPerMwhWithVat=126.784433, fromDateTime=2024-08-22T21:00Z, toDateTime=2024-08-23T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=8.1829, centsPerKwhWithVat=9.983209, eurPerMwh=81.8295, eurPerMwhWithVat=99.832091, fromDateTime=2024-08-23T21:00Z, toDateTime=2024-08-24T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=3.8508, centsPerKwhWithVat=4.698016, eurPerMwh=38.5083, eurPerMwhWithVat=46.980166, fromDateTime=2024-08-24T21:00Z, toDateTime=2024-08-25T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=13.0841, centsPerKwhWithVat=15.962632, eurPerMwh=130.8412, eurPerMwhWithVat=159.626325, fromDateTime=2024-08-25T21:00Z, toDateTime=2024-08-26T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=11.3218, centsPerKwhWithVat=13.812636, eurPerMwh=113.2183, eurPerMwhWithVat=138.126366, fromDateTime=2024-08-26T21:00Z, toDateTime=2024-08-27T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=11.5942, centsPerKwhWithVat=14.144934, eurPerMwh=115.942, eurPerMwhWithVat=141.449341, fromDateTime=2024-08-27T21:00Z, toDateTime=2024-08-28T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.7482, centsPerKwhWithVat=15.552814, eurPerMwh=127.482, eurPerMwhWithVat=155.528141, fromDateTime=2024-08-28T21:00Z, toDateTime=2024-08-29T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=13.0639, centsPerKwhWithVat=15.937978, eurPerMwh=130.6391, eurPerMwhWithVat=159.379783, fromDateTime=2024-08-29T21:00Z, toDateTime=2024-08-30T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.9363, centsPerKwhWithVat=13.342377, eurPerMwh=109.3637, eurPerMwhWithVat=133.423775, fromDateTime=2024-08-30T21:00Z, toDateTime=2024-08-31T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=8.2762, centsPerKwhWithVat=10.096974, eurPerMwh=82.762, eurPerMwhWithVat=100.969741, fromDateTime=2024-08-31T21:00Z, toDateTime=2024-09-01T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=15.6615, centsPerKwhWithVat=19.10703, eurPerMwh=156.615, eurPerMwhWithVat=191.0703, fromDateTime=2024-09-01T21:00Z, toDateTime=2024-09-02T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=15.5627, centsPerKwhWithVat=18.986555, eurPerMwh=155.6275, eurPerMwhWithVat=189.86555, fromDateTime=2024-09-02T21:00Z, toDateTime=2024-09-03T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.4604, centsPerKwhWithVat=15.201759, eurPerMwh=124.6045, eurPerMwhWithVat=152.017591, fromDateTime=2024-09-03T21:00Z, toDateTime=2024-09-04T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=8.5012, centsPerKwhWithVat=10.371525, eurPerMwh=85.0125, eurPerMwhWithVat=103.71525, fromDateTime=2024-09-04T21:00Z, toDateTime=2024-09-05T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=6.6578, centsPerKwhWithVat=8.122556, eurPerMwh=66.5783, eurPerMwhWithVat=81.225566, fromDateTime=2024-09-05T21:00Z, toDateTime=2024-09-06T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=3.5647, centsPerKwhWithVat=4.348995, eurPerMwh=35.6475, eurPerMwhWithVat=43.48995, fromDateTime=2024-09-06T21:00Z, toDateTime=2024-09-07T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=2.2697, centsPerKwhWithVat=2.769044, eurPerMwh=22.697, eurPerMwhWithVat=27.690441, fromDateTime=2024-09-07T21:00Z, toDateTime=2024-09-08T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=0.4735, centsPerKwhWithVat=0.57772, eurPerMwh=4.7354, eurPerMwhWithVat=5.777208, fromDateTime=2024-09-08T21:00Z, toDateTime=2024-09-09T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=5.6195, centsPerKwhWithVat=6.855891, eurPerMwh=56.1958, eurPerMwhWithVat=68.558916, fromDateTime=2024-09-09T21:00Z, toDateTime=2024-09-10T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=7.5509, centsPerKwhWithVat=9.212169, eurPerMwh=75.5095, eurPerMwhWithVat=92.121691, fromDateTime=2024-09-10T21:00Z, toDateTime=2024-09-11T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=13.0034, centsPerKwhWithVat=15.864168, eurPerMwh=130.0341, eurPerMwhWithVat=158.641683, fromDateTime=2024-09-11T21:00Z, toDateTime=2024-09-12T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=19.8122, centsPerKwhWithVat=24.170894, eurPerMwh=198.122, eurPerMwhWithVat=241.708941, fromDateTime=2024-09-12T21:00Z, toDateTime=2024-09-13T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=6.831, centsPerKwhWithVat=8.33382, eurPerMwh=68.31, eurPerMwhWithVat=83.3382, fromDateTime=2024-09-13T21:00Z, toDateTime=2024-09-14T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.0255, centsPerKwhWithVat=11.011211, eurPerMwh=90.2558, eurPerMwhWithVat=110.112116, fromDateTime=2024-09-14T21:00Z, toDateTime=2024-09-15T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=17.6047, centsPerKwhWithVat=21.477795, eurPerMwh=176.0475, eurPerMwhWithVat=214.77795, fromDateTime=2024-09-15T21:00Z, toDateTime=2024-09-16T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.5983, centsPerKwhWithVat=15.370017, eurPerMwh=125.9837, eurPerMwhWithVat=153.700175, fromDateTime=2024-09-16T21:00Z, toDateTime=2024-09-17T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.7127, centsPerKwhWithVat=11.849504, eurPerMwh=97.127, eurPerMwhWithVat=118.495041, fromDateTime=2024-09-17T21:00Z, toDateTime=2024-09-18T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=8.7845, centsPerKwhWithVat=10.717191, eurPerMwh=87.8458, eurPerMwhWithVat=107.171916, fromDateTime=2024-09-18T21:00Z, toDateTime=2024-09-19T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.8613, centsPerKwhWithVat=12.030826, eurPerMwh=98.6133, eurPerMwhWithVat=120.308266, fromDateTime=2024-09-19T21:00Z, toDateTime=2024-09-20T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=6.6164, centsPerKwhWithVat=8.072079, eurPerMwh=66.1645, eurPerMwhWithVat=80.720791, fromDateTime=2024-09-20T21:00Z, toDateTime=2024-09-21T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.648, centsPerKwhWithVat=11.77061, eurPerMwh=96.4804, eurPerMwhWithVat=117.706108, fromDateTime=2024-09-21T21:00Z, toDateTime=2024-09-22T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.7245, centsPerKwhWithVat=13.083991, eurPerMwh=107.2458, eurPerMwhWithVat=130.839916, fromDateTime=2024-09-22T21:00Z, toDateTime=2024-09-23T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=5.847, centsPerKwhWithVat=7.133441, eurPerMwh=58.4708, eurPerMwhWithVat=71.334416, fromDateTime=2024-09-23T21:00Z, toDateTime=2024-09-24T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=2.6997, centsPerKwhWithVat=3.293695, eurPerMwh=26.9975, eurPerMwhWithVat=32.93695, fromDateTime=2024-09-24T21:00Z, toDateTime=2024-09-25T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=4.1608, centsPerKwhWithVat=5.076267, eurPerMwh=41.6087, eurPerMwhWithVat=50.762675, fromDateTime=2024-09-25T21:00Z, toDateTime=2024-09-26T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=1.5409, centsPerKwhWithVat=1.879969, eurPerMwh=15.4095, eurPerMwhWithVat=18.799691, fromDateTime=2024-09-26T21:00Z, toDateTime=2024-09-27T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=4.1577, centsPerKwhWithVat=5.072404, eurPerMwh=41.577, eurPerMwhWithVat=50.724041, fromDateTime=2024-09-27T21:00Z, toDateTime=2024-09-28T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=3.2377, centsPerKwhWithVat=3.950055, eurPerMwh=32.3775, eurPerMwhWithVat=39.50055, fromDateTime=2024-09-28T21:00Z, toDateTime=2024-09-29T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.4243, centsPerKwhWithVat=12.717686, eurPerMwh=104.2433, eurPerMwhWithVat=127.176866, fromDateTime=2024-09-29T21:00Z, toDateTime=2024-09-30T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=8.6166, centsPerKwhWithVat=10.512282, eurPerMwh=86.1662, eurPerMwhWithVat=105.122825, fromDateTime=2024-09-30T21:00Z, toDateTime=2024-10-01T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=24.1099, centsPerKwhWithVat=29.414098, eurPerMwh=241.0991, eurPerMwhWithVat=294.140983, fromDateTime=2024-10-01T21:00Z, toDateTime=2024-10-02T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=18.7647, centsPerKwhWithVat=22.893045, eurPerMwh=187.6479, eurPerMwhWithVat=228.930458, fromDateTime=2024-10-02T21:00Z, toDateTime=2024-10-03T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.465, centsPerKwhWithVat=12.767401, eurPerMwh=104.6508, eurPerMwhWithVat=127.674016, fromDateTime=2024-10-03T21:00Z, toDateTime=2024-10-04T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=11.596, centsPerKwhWithVat=14.14717, eurPerMwh=115.9604, eurPerMwhWithVat=141.471708, fromDateTime=2024-10-04T21:00Z, toDateTime=2024-10-05T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=7.6618, centsPerKwhWithVat=9.347436, eurPerMwh=76.6183, eurPerMwhWithVat=93.474366, fromDateTime=2024-10-05T21:00Z, toDateTime=2024-10-06T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=13.1089, centsPerKwhWithVat=15.992929, eurPerMwh=131.0895, eurPerMwhWithVat=159.929291, fromDateTime=2024-10-06T21:00Z, toDateTime=2024-10-07T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=7.8851, centsPerKwhWithVat=9.619903, eurPerMwh=78.8516, eurPerMwhWithVat=96.199033, fromDateTime=2024-10-07T21:00Z, toDateTime=2024-10-08T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=2.2957, centsPerKwhWithVat=2.800764, eurPerMwh=22.957, eurPerMwhWithVat=28.007641, fromDateTime=2024-10-08T21:00Z, toDateTime=2024-10-09T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=3.4182, centsPerKwhWithVat=4.170214, eurPerMwh=34.182, eurPerMwhWithVat=41.702141, fromDateTime=2024-10-09T21:00Z, toDateTime=2024-10-10T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=5.7707, centsPerKwhWithVat=7.040315, eurPerMwh=57.7075, eurPerMwhWithVat=70.40315, fromDateTime=2024-10-10T21:00Z, toDateTime=2024-10-11T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=8.6225, centsPerKwhWithVat=10.519551, eurPerMwh=86.2258, eurPerMwhWithVat=105.195516, fromDateTime=2024-10-11T21:00Z, toDateTime=2024-10-12T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=1.613, centsPerKwhWithVat=1.96791, eurPerMwh=16.1304, eurPerMwhWithVat=19.679108, fromDateTime=2024-10-12T21:00Z, toDateTime=2024-10-13T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.9755, centsPerKwhWithVat=15.83011, eurPerMwh=129.755, eurPerMwhWithVat=158.3011, fromDateTime=2024-10-13T21:00Z, toDateTime=2024-10-14T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=11.9207, centsPerKwhWithVat=14.543264, eurPerMwh=119.207, eurPerMwhWithVat=145.432641, fromDateTime=2024-10-14T21:00Z, toDateTime=2024-10-15T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=8.8276, centsPerKwhWithVat=10.769753, eurPerMwh=88.2766, eurPerMwhWithVat=107.697533, fromDateTime=2024-10-15T21:00Z, toDateTime=2024-10-16T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=3.5506, centsPerKwhWithVat=4.331762, eurPerMwh=35.5062, eurPerMwhWithVat=43.317625, fromDateTime=2024-10-16T21:00Z, toDateTime=2024-10-17T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=1.9437, centsPerKwhWithVat=2.371324, eurPerMwh=19.437, eurPerMwhWithVat=23.713241, fromDateTime=2024-10-17T21:00Z, toDateTime=2024-10-18T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=0.8633, centsPerKwhWithVat=1.053317, eurPerMwh=8.6337, eurPerMwhWithVat=10.533175, fromDateTime=2024-10-18T21:00Z, toDateTime=2024-10-19T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=0.2708, centsPerKwhWithVat=0.330467, eurPerMwh=2.7087, eurPerMwhWithVat=3.304675, fromDateTime=2024-10-19T21:00Z, toDateTime=2024-10-20T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.3683, centsPerKwhWithVat=11.429417, eurPerMwh=93.6837, eurPerMwhWithVat=114.294175, fromDateTime=2024-10-20T21:00Z, toDateTime=2024-10-21T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=13.602, centsPerKwhWithVat=16.59449, eurPerMwh=136.0204, eurPerMwhWithVat=165.944908, fromDateTime=2024-10-21T21:00Z, toDateTime=2024-10-22T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=5.8216, centsPerKwhWithVat=7.102433, eurPerMwh=58.2166, eurPerMwhWithVat=71.024333, fromDateTime=2024-10-22T21:00Z, toDateTime=2024-10-23T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.2267, centsPerKwhWithVat=14.916584, eurPerMwh=122.267, eurPerMwhWithVat=149.165841, fromDateTime=2024-10-23T21:00Z, toDateTime=2024-10-24T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=14.9652, centsPerKwhWithVat=18.257605, eurPerMwh=149.6525, eurPerMwhWithVat=182.57605, fromDateTime=2024-10-24T21:00Z, toDateTime=2024-10-25T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.2866, centsPerKwhWithVat=14.989733, eurPerMwh=122.8666, eurPerMwhWithVat=149.897333, fromDateTime=2024-10-25T21:00Z, toDateTime=2024-10-26T20:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=15.4133, centsPerKwhWithVat=18.80425, eurPerMwh=154.1332, eurPerMwhWithVat=188.042504, fromDateTime=2024-10-26T21:00Z, toDateTime=2024-10-27T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=11.9337, centsPerKwhWithVat=14.559225, eurPerMwh=119.3379, eurPerMwhWithVat=145.592258, fromDateTime=2024-10-27T22:00Z, toDateTime=2024-10-28T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=16.6964, centsPerKwhWithVat=20.369628, eurPerMwh=166.9641, eurPerMwhWithVat=203.696283, fromDateTime=2024-10-28T22:00Z, toDateTime=2024-10-29T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=1.4055, centsPerKwhWithVat=1.71471, eurPerMwh=14.055, eurPerMwhWithVat=17.1471, fromDateTime=2024-10-29T22:00Z, toDateTime=2024-10-30T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=4.9781, centsPerKwhWithVat=6.073363, eurPerMwh=49.7816, eurPerMwhWithVat=60.733633, fromDateTime=2024-10-30T22:00Z, toDateTime=2024-10-31T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=0.6157, centsPerKwhWithVat=0.751164, eurPerMwh=6.157, eurPerMwhWithVat=7.511641, fromDateTime=2024-10-31T22:00Z, toDateTime=2024-11-01T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=0.9764, centsPerKwhWithVat=1.191228, eurPerMwh=9.7641, eurPerMwhWithVat=11.912283, fromDateTime=2024-11-01T22:00Z, toDateTime=2024-11-02T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=1.6714, centsPerKwhWithVat=2.039179, eurPerMwh=16.7145, eurPerMwhWithVat=20.391791, fromDateTime=2024-11-02T22:00Z, toDateTime=2024-11-03T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.3256, centsPerKwhWithVat=12.597262, eurPerMwh=103.2562, eurPerMwhWithVat=125.972625, fromDateTime=2024-11-03T22:00Z, toDateTime=2024-11-04T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.9845, centsPerKwhWithVat=12.18109, eurPerMwh=99.845, eurPerMwhWithVat=121.8109, fromDateTime=2024-11-04T22:00Z, toDateTime=2024-11-05T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.6921, centsPerKwhWithVat=13.044392, eurPerMwh=106.9212, eurPerMwhWithVat=130.443925, fromDateTime=2024-11-05T22:00Z, toDateTime=2024-11-06T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.905, centsPerKwhWithVat=13.3041, eurPerMwh=109.05, eurPerMwhWithVat=133.041, fromDateTime=2024-11-06T22:00Z, toDateTime=2024-11-07T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=8.8189, centsPerKwhWithVat=10.759078, eurPerMwh=88.1891, eurPerMwhWithVat=107.590783, fromDateTime=2024-11-07T22:00Z, toDateTime=2024-11-08T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=6.0284, centsPerKwhWithVat=7.354668, eurPerMwh=60.2841, eurPerMwhWithVat=73.546683, fromDateTime=2024-11-08T22:00Z, toDateTime=2024-11-09T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.8031, centsPerKwhWithVat=13.179812, eurPerMwh=108.0312, eurPerMwhWithVat=131.798125, fromDateTime=2024-11-09T22:00Z, toDateTime=2024-11-10T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=11.265, centsPerKwhWithVat=13.7433, eurPerMwh=112.65, eurPerMwhWithVat=137.433, fromDateTime=2024-11-10T22:00Z, toDateTime=2024-11-11T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=13.9398, centsPerKwhWithVat=17.006647, eurPerMwh=139.3987, eurPerMwhWithVat=170.066475, fromDateTime=2024-11-11T22:00Z, toDateTime=2024-11-12T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.4337, centsPerKwhWithVat=15.169175, eurPerMwh=124.3375, eurPerMwhWithVat=151.69175, fromDateTime=2024-11-12T22:00Z, toDateTime=2024-11-13T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=8.6575, centsPerKwhWithVat=10.5622, eurPerMwh=86.5754, eurPerMwhWithVat=105.622008, fromDateTime=2024-11-13T22:00Z, toDateTime=2024-11-14T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=8.2164, centsPerKwhWithVat=10.024079, eurPerMwh=82.1645, eurPerMwhWithVat=100.240791, fromDateTime=2024-11-14T22:00Z, toDateTime=2024-11-15T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=0.3113, centsPerKwhWithVat=0.379826, eurPerMwh=3.1133, eurPerMwhWithVat=3.798266, fromDateTime=2024-11-15T22:00Z, toDateTime=2024-11-16T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=2.0905, centsPerKwhWithVat=2.550511, eurPerMwh=20.9058, eurPerMwhWithVat=25.505116, fromDateTime=2024-11-16T22:00Z, toDateTime=2024-11-17T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.0074, centsPerKwhWithVat=10.989099, eurPerMwh=90.0745, eurPerMwhWithVat=109.890991, fromDateTime=2024-11-17T22:00Z, toDateTime=2024-11-18T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.8106, centsPerKwhWithVat=15.629013, eurPerMwh=128.1066, eurPerMwhWithVat=156.290133, fromDateTime=2024-11-18T22:00Z, toDateTime=2024-11-19T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.0292, centsPerKwhWithVat=11.015634, eurPerMwh=90.292, eurPerMwhWithVat=110.156341, fromDateTime=2024-11-19T22:00Z, toDateTime=2024-11-20T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.2234, centsPerKwhWithVat=12.472568, eurPerMwh=102.2341, eurPerMwhWithVat=124.725683, fromDateTime=2024-11-20T22:00Z, toDateTime=2024-11-21T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.8708, centsPerKwhWithVat=15.702467, eurPerMwh=128.7087, eurPerMwhWithVat=157.024675, fromDateTime=2024-11-21T22:00Z, toDateTime=2024-11-22T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=7.8362, centsPerKwhWithVat=9.560174, eurPerMwh=78.362, eurPerMwhWithVat=95.601741, fromDateTime=2024-11-22T22:00Z, toDateTime=2024-11-23T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=1.5746, centsPerKwhWithVat=1.921042, eurPerMwh=15.7462, eurPerMwhWithVat=19.210425, fromDateTime=2024-11-23T22:00Z, toDateTime=2024-11-24T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=1.4236, centsPerKwhWithVat=1.736873, eurPerMwh=14.2366, eurPerMwhWithVat=17.368733, fromDateTime=2024-11-24T22:00Z, toDateTime=2024-11-25T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.3977, centsPerKwhWithVat=11.465204, eurPerMwh=93.977, eurPerMwhWithVat=114.652041, fromDateTime=2024-11-25T22:00Z, toDateTime=2024-11-26T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=13.4708, centsPerKwhWithVat=16.434467, eurPerMwh=134.7087, eurPerMwhWithVat=164.344675, fromDateTime=2024-11-26T22:00Z, toDateTime=2024-11-27T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.8912, centsPerKwhWithVat=15.727375, eurPerMwh=128.9129, eurPerMwhWithVat=157.273758, fromDateTime=2024-11-27T22:00Z, toDateTime=2024-11-28T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=13.3024, centsPerKwhWithVat=16.228999, eurPerMwh=133.0245, eurPerMwhWithVat=162.289991, fromDateTime=2024-11-28T22:00Z, toDateTime=2024-11-29T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=6.0671, centsPerKwhWithVat=7.401892, eurPerMwh=60.6712, eurPerMwhWithVat=74.018925, fromDateTime=2024-11-29T22:00Z, toDateTime=2024-11-30T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=3.836, centsPerKwhWithVat=4.67992, eurPerMwh=38.36, eurPerMwhWithVat=46.7992, fromDateTime=2024-11-30T22:00Z, toDateTime=2024-12-01T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=7.3296, centsPerKwhWithVat=8.942193, eurPerMwh=73.2966, eurPerMwhWithVat=89.421933, fromDateTime=2024-12-01T22:00Z, toDateTime=2024-12-02T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.1696, centsPerKwhWithVat=12.406942, eurPerMwh=101.6962, eurPerMwhWithVat=124.069425, fromDateTime=2024-12-02T22:00Z, toDateTime=2024-12-03T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=13.0031, centsPerKwhWithVat=15.863812, eurPerMwh=130.0312, eurPerMwhWithVat=158.638125, fromDateTime=2024-12-03T22:00Z, toDateTime=2024-12-04T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=6.0119, centsPerKwhWithVat=7.334538, eurPerMwh=60.1191, eurPerMwhWithVat=73.345383, fromDateTime=2024-12-04T22:00Z, toDateTime=2024-12-05T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.3495, centsPerKwhWithVat=11.40639, eurPerMwh=93.495, eurPerMwhWithVat=114.0639, fromDateTime=2024-12-05T22:00Z, toDateTime=2024-12-06T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.349, centsPerKwhWithVat=11.40578, eurPerMwh=93.49, eurPerMwhWithVat=114.0578, fromDateTime=2024-12-06T22:00Z, toDateTime=2024-12-07T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=8.9628, centsPerKwhWithVat=10.934707, eurPerMwh=89.6287, eurPerMwhWithVat=109.347075, fromDateTime=2024-12-07T22:00Z, toDateTime=2024-12-08T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=11.1167, centsPerKwhWithVat=13.562485, eurPerMwh=111.1679, eurPerMwhWithVat=135.624858, fromDateTime=2024-12-08T22:00Z, toDateTime=2024-12-09T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=14.847, centsPerKwhWithVat=18.11339, eurPerMwh=148.4704, eurPerMwhWithVat=181.133908, fromDateTime=2024-12-09T22:00Z, toDateTime=2024-12-10T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=22.1557, centsPerKwhWithVat=27.030015, eurPerMwh=221.5575, eurPerMwhWithVat=270.30015, fromDateTime=2024-12-10T22:00Z, toDateTime=2024-12-11T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=15.5696, centsPerKwhWithVat=18.994942, eurPerMwh=155.6962, eurPerMwhWithVat=189.949425, fromDateTime=2024-12-11T22:00Z, toDateTime=2024-12-12T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=14.5935, centsPerKwhWithVat=17.80412, eurPerMwh=145.9354, eurPerMwhWithVat=178.041208, fromDateTime=2024-12-12T22:00Z, toDateTime=2024-12-13T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=4.7849, centsPerKwhWithVat=5.837649, eurPerMwh=47.8495, eurPerMwhWithVat=58.376491, fromDateTime=2024-12-13T22:00Z, toDateTime=2024-12-14T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=4.4007, centsPerKwhWithVat=5.368915, eurPerMwh=44.0075, eurPerMwhWithVat=53.68915, fromDateTime=2024-12-14T22:00Z, toDateTime=2024-12-15T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=3.7534, centsPerKwhWithVat=4.579219, eurPerMwh=37.5345, eurPerMwhWithVat=45.792191, fromDateTime=2024-12-15T22:00Z, toDateTime=2024-12-16T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=9.8199, centsPerKwhWithVat=11.980349, eurPerMwh=98.1995, eurPerMwhWithVat=119.803491, fromDateTime=2024-12-16T22:00Z, toDateTime=2024-12-17T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=14.503, centsPerKwhWithVat=17.69366, eurPerMwh=145.03, eurPerMwhWithVat=176.9366, fromDateTime=2024-12-17T22:00Z, toDateTime=2024-12-18T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=3.2376, centsPerKwhWithVat=3.949902, eurPerMwh=32.3762, eurPerMwhWithVat=39.499025, fromDateTime=2024-12-18T22:00Z, toDateTime=2024-12-19T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=4.4136, centsPerKwhWithVat=5.384622, eurPerMwh=44.1362, eurPerMwhWithVat=53.846225, fromDateTime=2024-12-19T22:00Z, toDateTime=2024-12-20T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=4.2551, centsPerKwhWithVat=5.191303, eurPerMwh=42.5516, eurPerMwhWithVat=51.913033, fromDateTime=2024-12-20T22:00Z, toDateTime=2024-12-21T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=2.2424, centsPerKwhWithVat=2.735799, eurPerMwh=22.4245, eurPerMwhWithVat=27.357991, fromDateTime=2024-12-21T22:00Z, toDateTime=2024-12-22T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=10.1579, centsPerKwhWithVat=12.392709, eurPerMwh=101.5795, eurPerMwhWithVat=123.927091, fromDateTime=2024-12-22T22:00Z, toDateTime=2024-12-23T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=7.4015, centsPerKwhWithVat=9.029931, eurPerMwh=74.0158, eurPerMwhWithVat=90.299316, fromDateTime=2024-12-23T22:00Z, toDateTime=2024-12-24T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=1.2195, centsPerKwhWithVat=1.48784, eurPerMwh=12.1954, eurPerMwhWithVat=14.878408, fromDateTime=2024-12-24T22:00Z, toDateTime=2024-12-25T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=2.9852, centsPerKwhWithVat=3.641954, eurPerMwh=29.852, eurPerMwhWithVat=36.419541, fromDateTime=2024-12-25T22:00Z, toDateTime=2024-12-26T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=14.097, centsPerKwhWithVat=17.19839, eurPerMwh=140.9704, eurPerMwhWithVat=171.983908, fromDateTime=2024-12-26T22:00Z, toDateTime=2024-12-27T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=12.7537, centsPerKwhWithVat=15.559524, eurPerMwh=127.537, eurPerMwhWithVat=155.595241, fromDateTime=2024-12-27T22:00Z, toDateTime=2024-12-28T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=6.3621, centsPerKwhWithVat=7.761792, eurPerMwh=63.6212, eurPerMwhWithVat=77.617925, fromDateTime=2024-12-28T22:00Z, toDateTime=2024-12-29T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=3.8177, centsPerKwhWithVat=4.657604, eurPerMwh=38.177, eurPerMwhWithVat=46.576041, fromDateTime=2024-12-29T22:00Z, toDateTime=2024-12-30T21:59:59.999999999Z}, MarketPriceDataPoint{centsPerKwh=4.7955, centsPerKwhWithVat=5.85056, eurPerMwh=47.9554, eurPerMwhWithVat=58.505608, fromDateTime=2024-12-30T22:00Z, toDateTime=2024-12-31T21:59:59.999999999Z}]
+2025-04-06 15:20:00.649 INFO  [http-nio-8080-exec-7] c.e.m.service.MarketPriceService - Aggregating 215 raw data points by month.
+2025-04-06 15:20:00.656 INFO  [http-nio-8080-exec-7] c.e.m.service.MarketPriceService - Here are the aggregated marketData [MarketPriceDataPoint{centsPerKwh=8.74395, centsPerKwhWithVat=10.66768, eurPerMwh=87.44, eurPerMwhWithVat=106.6768, fromDateTime=2024-05-01T00:00+03:00, toDateTime=2024-05-31T23:59:59.999999999+03:00}, MarketPriceDataPoint{centsPerKwh=9.373893333333333, centsPerKwhWithVat=11.4362016, eurPerMwh=93.73930999999999, eurPerMwhWithVat=114.3620202, fromDateTime=2024-06-01T00:00+03:00, toDateTime=2024-06-30T23:59:59.999999999+03:00}, MarketPriceDataPoint{centsPerKwh=9.695587096774194, centsPerKwhWithVat=11.82868170967742, eurPerMwh=96.9563741935484, eurPerMwhWithVat=118.28682145161291, fromDateTime=2024-07-01T00:00+03:00, toDateTime=2024-07-31T23:59:59.999999999+03:00}, MarketPriceDataPoint{centsPerKwh=10.61819677419355, centsPerKwhWithVat=12.954249838709678, eurPerMwh=106.1823322580645, eurPerMwhWithVat=129.54250203225806, fromDateTime=2024-08-01T00:00+03:00, toDateTime=2024-08-31T23:59:59.999999999+03:00}, MarketPriceDataPoint{centsPerKwh=8.44097, centsPerKwhWithVat=10.2980383, eurPerMwh=84.41011333333334, eurPerMwhWithVat=102.980386, fromDateTime=2024-09-01T00:00+03:00, toDateTime=2024-09-30T23:59:59.999999999+03:00}, MarketPriceDataPoint{centsPerKwh=8.87021935483871, centsPerKwhWithVat=10.821720483870969, eurPerMwh=88.70258387096774, eurPerMwhWithVat=108.21720838709678, fromDateTime=2024-10-01T00:00+03:00, toDateTime=2024-10-31T23:59:59.999999999+03:00}, MarketPriceDataPoint{centsPerKwh=8.36202, centsPerKwhWithVat=10.201709133333335, eurPerMwh=83.62052, eurPerMwhWithVat=102.01709443333333, fromDateTime=2024-11-01T00:00+03:00, toDateTime=2024-11-30T23:59:59.999999999+03:00}, MarketPriceDataPoint{centsPerKwh=8.581956666666667, centsPerKwhWithVat=10.470034533333335, eurPerMwh=85.81991333333333, eurPerMwhWithVat=104.70034886666666, fromDateTime=2024-12-01T00:00+03:00, toDateTime=2024-12-31T23:59:59.999999999+03:00}]
+2025-04-06 15:23:20.619 INFO  [http-nio-8080-exec-10] c.e.metering.config.JwtAuthFilter - Authenticated user: H**********s
+2025-04-06 15:23:20.622 INFO  [http-nio-8080-exec-10] c.e.m.c.MarketPriceController - Retrieving market prices from 2024-05-31T20:59:59.999Z to 2024-12-31T20:59:59.999Z
+2025-04-06 15:23:20.631 ERROR [http-nio-8080-exec-10] c.e.m.controller.ControllerAdvice - Internal Server Error: 
+java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class com.enefit.metering.models.MarketPriceData (java.util.ArrayList is in module java.base of loader 'bootstrap'; com.enefit.metering.models.MarketPriceData is in unnamed module of loader org.springframework.boot.loader.launch.LaunchedClassLoader @2a84aee7)
+	at com.enefit.metering.service.MarketPriceService$$SpringCGLIB$$0.getAggregatedMarketPrices(<generated>)
+	at com.enefit.metering.controller.MarketPriceController.getMarketPrices(MarketPriceController.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at com.enefit.metering.config.JwtAuthFilter.doFilterInternal(JwtAuthFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-04-06 15:28:14.860 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-06 15:28:14.864 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-06 15:28:16.901 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-06 15:28:16.904 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-06 15:28:16.907 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
