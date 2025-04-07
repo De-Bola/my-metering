@@ -44,6 +44,9 @@ The backend is built with Spring Boot and connects to PostgreSQL for data persis
    ```bash
    git clone https://github.com/De-Bola/my-metering.git
    cd my-metering
+   cd my-metering-be
+   ./gradlew clean build
+   cd ..
    docker-compose up --build
 
 ## API Endpoints
