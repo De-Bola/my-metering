@@ -37,8 +37,8 @@ services:
     container_name: metering-db-postgres
     image: postgres
     restart: always
-#    volumes:
-#      - ./my-metering-be/sql:/docker-entrypoint-initdb.d
+    volumes:
+      - ./my-metering-be/sql:/docker-entrypoint-initdb.d
     environment:
       - POSTGRES_PASSWORD=root
       - POSTGRES_USER=postgres
