@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1138267f-8b67-4778-bfd6-77565f864624" name="Changes" comment="added finishing touches" />
+    <list default="true" id="1138267f-8b67-4778-bfd6-77565f864624" name="Changes" comment="added finishing touches">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/diff-generator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-metering-be/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-metering-be/src/main/resources/db/changelog/08-01-changelog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-metering-fe/default.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-metering-fe/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/metering.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/metering.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-metering-be/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/my-metering-be/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-metering-be/logs/metering.log" beforeDir="false" afterPath="$PROJECT_DIR$/my-metering-be/logs/metering.log.08-04-25" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-metering-be/metering/logs/metering.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-metering-be/src/main/resources/db/changelog/db.changelog-master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my-metering-be/src/main/resources/db/changelog/db.changelog-master.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-metering-fe/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/my-metering-fe/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-metering-fe/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-metering-fe/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-metering-fe/src/components/NavBarMetering.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-metering-fe/src/components/NavBarMetering.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +51,17 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="metering" type="f1a62948:ProjectNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="metering" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="metering" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -42,17 +73,18 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Liquibase Changelog" />
-        <option value="com.intellij.jpb.JpaLiquibaseChangeLog" />
         <option value="spring-beans.schema" />
         <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
         <option value="Dockerfile" />
+        <option value="package.json" />
+        <option value="com.intellij.jpb.JpaLiquibaseChangeLog" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/my-metering-be" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -63,7 +95,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/De-Bola/my-metering-fe.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/De-Bola/my-metering.git&quot;,
     &quot;accountId&quot;: &quot;9cef957f-d77d-474c-868d-b6a9fa9eb276&quot;
   },
   &quot;recentNewPullRequestHead&quot;: {
@@ -93,60 +125,63 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build metering.executor": "Run",
-    "Gradle.Build my-metering-be.executor": "Run",
-    "Gradle.ConsumptionControllerIntegrationTest.executor": "Run",
-    "Gradle.ConsumptionServiceIntegrationTest.executor": "Run",
-    "Gradle.CostServiceIntegrationTest.executor": "Run",
-    "Gradle.CostServiceIntegrationTest.testJsonSerializationReturnsJsonResult.executor": "Run",
-    "Gradle.CustomerControllerIntegrationTest.executor": "Run",
-    "Gradle.CustomerControllerIntegrationTest.testGetCustomerById.executor": "Run",
-    "Gradle.MeteringApplicationTests.contextLoads.executor": "Run",
-    "Gradle.MeteringPointControllerIntegrationTest.executor": "Run",
-    "Gradle.MeteringPointServiceIntegrationTest.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.MeteringApplication.executor": "Run",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/bhumm/Downloads/metering/my-metering-be/.gradle",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.22183909",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build metering.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build my-metering-be.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.C:/Users/bhumm/Downloads/metering [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ConsumptionControllerIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ConsumptionServiceIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CostServiceIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CostServiceIntegrationTest.testJsonSerializationReturnsJsonResult.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CustomerControllerIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CustomerControllerIntegrationTest.testGetCustomerById.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MeteringApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MeteringPointControllerIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MeteringPointServiceIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.MeteringApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/bhumm/Downloads/metering/my-metering-fe&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.22183909&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
-      "PostgreSQL"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
+      &quot;PostgreSQL&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "Markdown",
-      "yaml"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Markdown&quot;,
+      &quot;yaml&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.enefit.metering.exceptions" />
       <recent name="com.enefit.metering.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bhumm\Downloads\metering\my-metering-fe" />
       <recent name="C:\Users\bhumm\Downloads\metering\src\test\resources\templates" />
       <recent name="C:\Users\bhumm\Downloads\metering\sql" />
       <recent name="C:\Users\bhumm\Downloads\metering" />
@@ -159,6 +194,28 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.MeteringApplication">
+    <configuration name="C:/Users/bhumm/Downloads/metering [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="ConsumptionControllerIntegrationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -255,30 +312,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MeteringPointControllerIntegrationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.enefit.metering.controller.MeteringPointControllerIntegrationTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -300,20 +333,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.C:/Users/bhumm/Downloads/metering [build]" />
       <item itemvalue="Gradle.ConsumptionControllerIntegrationTest" />
       <item itemvalue="Gradle.CustomerControllerIntegrationTest" />
       <item itemvalue="Gradle.CustomerControllerIntegrationTest.testGetCustomerById" />
       <item itemvalue="Gradle.MeteringApplicationTests.contextLoads" />
-      <item itemvalue="Gradle.MeteringPointControllerIntegrationTest" />
       <item itemvalue="Spring Boot.MeteringApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.C:/Users/bhumm/Downloads/metering [build]" />
         <item itemvalue="Gradle.CustomerControllerIntegrationTest.testGetCustomerById" />
         <item itemvalue="Gradle.CustomerControllerIntegrationTest" />
         <item itemvalue="Gradle.ConsumptionControllerIntegrationTest" />
         <item itemvalue="Gradle.MeteringApplicationTests.contextLoads" />
-        <item itemvalue="Gradle.MeteringPointControllerIntegrationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -343,6 +376,9 @@
       <workItem from="1743970744528" duration="60000" />
       <workItem from="1743970827402" duration="365000" />
       <workItem from="1743971196404" duration="1780000" />
+      <workItem from="1744002002502" duration="8117000" />
+      <workItem from="1744066823536" duration="13248000" />
+      <workItem from="1744080790594" duration="336000" />
     </task>
     <task id="LOCAL-00001" summary="added spring security and ready for next steps">
       <option name="closed" value="true" />
@@ -386,6 +422,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/my-metering-be" />
+      <path value="$PROJECT_DIR$/my-metering-fe" />
+    </ignored-roots>
     <MESSAGE value="added spring security and ready for next steps" />
     <MESSAGE value="finalized spring sec, refactored code and updated proxy side" />
     <MESSAGE value="finalized project" />

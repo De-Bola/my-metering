@@ -8,7 +8,7 @@ const NavBarMetering = () => {
       <header>
         <Navbar justify="true" expand="xxl" data-bs-theme='dark' style={{backgroundColor: '#174708'}}>
           <Container>
-            <Navbar.Brand as={Link} to="/">Dashboard</Navbar.Brand>
+            <Navbar.Brand as={Link} to="/dashboard">Dashboard</Navbar.Brand>
             <Navbar.Toggle/>
             <Navbar.Collapse>
             <Nav fill="true" variant='tabs' className='me-auto' style={{ width: '100%' }}>
