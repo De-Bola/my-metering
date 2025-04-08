@@ -38,7 +38,7 @@ function Login() {
                 "customer",
                 JSON.stringify(response.data.data?.response || response.data.response)
               );
-              navigate("/", { replace: true });
+              navigate("/dashboard", { replace: true });
             })
             .catch((error) => {
               console.error("Login failed:", error);

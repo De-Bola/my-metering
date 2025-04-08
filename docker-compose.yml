@@ -8,9 +8,6 @@ services:
     image: 'metering-backend:latest'
     ports:
       - "8080:8080"
-    working_dir: /metering
-    volumes:
-      - ./my-metering-be:/metering
     depends_on:
       - postgres
       - redis
