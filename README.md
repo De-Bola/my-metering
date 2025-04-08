@@ -68,7 +68,7 @@ Customers using this platform can:
    ```
 2. **Navigate to the backend project root:**
    ```bash
-   cd my-metering/my-metering-be/
+   cd my-metering/
    ```
 3. **Start the application using Docker Compose:**
    ```bash
