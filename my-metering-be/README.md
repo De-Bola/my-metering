@@ -53,15 +53,7 @@
 
 ---
 
-## 6. Security & Authentication (If Needed)
 
-| Method  | Endpoint              | Description                         |
-|---------|-----------------------|-------------------------------------|
-| **POST**   | `/api/auth/register` | Register a new customer            |
-| **POST**   | `/api/auth/login`    | Login and get JWT token            |
-| **GET**    | `/api/customers/me`  | Get currently logged-in customer details |
-
----
 
 ## Notes:
 - **{id}** represents a customer’s unique ID.

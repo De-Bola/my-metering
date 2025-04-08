@@ -3,6 +3,7 @@ services:
   metering-backend:
     build:
       context: ./my-metering-be
+      dockerfile: Dockerfile
     container_name: metering-backend
     image: 'metering-backend:latest'
     ports:
@@ -36,10 +37,8 @@ services:
     container_name: metering-db-postgres
     image: postgres
     restart: always
-    volumes:
-      - ./sql/create-tables:/docker-entrypoint-initdb.d/10-create-tables.sql
-      - ./sql/metering-points:/docker-entrypoint-initdb.d/20-metering-points.sql
-      - ./sql/consumption:/docker-entrypoint-initdb.d/30-consumption.sql
+#    volumes:
+#      - ./my-metering-be/sql:/docker-entrypoint-initdb.d
     environment:
       - POSTGRES_PASSWORD=root
       - POSTGRES_USER=postgres
