@@ -1,13 +1,16 @@
-//package com.enefit.metering;
-//
-//import org.springframework.boot.SpringApplication;
-//
-//public class TestMeteringApplication {
-//
-//	public static void main(String[] args) {
-//		System.setProperty("testcontainers.gitExecutable", "C:\\Program Files\\Git\\bin\\git.exe");
-//		SpringApplication.from(MeteringApplication::main).with(TestcontainersConfiguration.class).run(args);
-//	}
-//
-//}
-////
+package com.enefit.metering;
+
+import com.enefit.metering.config.TestContainerInitializer;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
+
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@ActiveProfiles("test")
+public class TestMeteringApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.from(MeteringApplication::main).with(TestContainerInitializer.class).run(args);
+	}
+
+}

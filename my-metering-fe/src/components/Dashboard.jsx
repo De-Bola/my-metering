@@ -68,7 +68,6 @@ const Dashboard = () => {
 
   return (
     <div>
-      <h2>Dashboard</h2>
       <div style={{ marginBottom: "20px" }}>
         <div>
           <label htmlFor="meteringPointSelect">Select Metering Point: </label>
